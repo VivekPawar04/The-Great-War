@@ -12,6 +12,7 @@ public class TurnDecision : MonoBehaviour
     public Light lt2;
     public BattleState state;
     public TMP_Text text;
+    public static bool TimerStart = false; // Added by Harshit to start timer on each turn.
     
     void Start()
     {
@@ -35,6 +36,7 @@ public class TurnDecision : MonoBehaviour
             lt2.enabled = true;
             state = BattleState.PLAYER2TURN;
             text.text = "Player 2";
+            TimerStart = true;
         }
         else if(state == BattleState.PLAYER2TURN)
         {
@@ -42,6 +44,7 @@ public class TurnDecision : MonoBehaviour
             lt1.enabled = false;
             lt2.enabled = false;
             text.text = "Start";
+            TimerStart = true;
         }
     }
 }

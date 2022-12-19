@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PracticeButton : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
-    public void LoadScene(string sceneName)
+    public void LoadScene(string SceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(SceneName);
     }
 }
